@@ -35,7 +35,9 @@ base64字符串，去解密
     }
 刚开始连xss是啥都不知道，谷歌了各种资料，算是有了初步印象
 只过滤了script，这个好绕过
+
 `<img src=1 onerror=prompt(1)>`
+
 ### WEB从0开始之xss challenge1
     Try to prompt(1)
     
@@ -44,7 +46,9 @@ base64字符串，去解密
         return input;
     }
 过滤了 = 和 （ ，用script和svg
+
 `<svg><script>prompt&#40;1)</script>`
+
 简单说就是svg里面的元素如果有html实体编码，会先进行解码，所以 `&#40;`会被转换为`（`
 # PENTEST
 ### lightless&aklis的渗透教室-3
