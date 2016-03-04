@@ -57,9 +57,14 @@ base32解密
 ![](image/002.png)
 
 >GZIP最早由Jean-loup Gailly和Mark Adler创建，用于UNIX系统的文件压缩，现在已经成为Internet上使用非常普遍的一种数据压缩格式，或者说一种文件格式，文件后缀为.gz
+
 此外发现改为任何压缩格式的后缀都可以打开
     
-打开后是一个[tar](https://zh.wikipedia.org/wiki/Tar)文件，`tar -xvf flag`，得到两个txt，一个是flag，另一个是为了扩大空间的一堆无用字符串
+解压缩后得到一个文件
+
+![](image/003.png)
+
+[tar](https://zh.wikipedia.org/wiki/Tar)文件，`tar -xvf flag`，得到两个txt，一个是flag，另一个是为了扩大空间的一堆无用字符串
 
 # WEB
 
