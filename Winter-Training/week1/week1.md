@@ -44,6 +44,23 @@ base32解密
 
 了解各种编码方式是解这道题的关键
 
+### MISC从0开始之流量分析1
+
+题目给了一个pcap文件，打开后先筛选`http`，发现有个`GET /flag`的请求，于是`follow tcp stream`，在得到的响应中发现奇怪的字符串，猜想flag肯定在响应中了，但始终弄不出文件
+    
+看了其他人的wp后得到了一项新技能，原来可以这样（= =）
+
+![](image/001.png)
+
+把里面名为flag的文件保存下来
+
+![](image/002.png)
+
+>GZIP最早由Jean-loup Gailly和Mark Adler创建，用于UNIX系统的文件压缩，现在已经成为Internet上使用非常普遍的一种数据压缩格式，或者说一种文件格式，文件后缀为.gz
+此外发现改为任何压缩格式的后缀都可以打开
+    
+打开后是一个[tar](https://zh.wikipedia.org/wiki/Tar)文件，`tar -xvf flag`，得到两个txt，一个是flag，另一个是为了扩大空间的一堆无用字符串
+
 # WEB
 
 ### WEB从0开始之PHP代码审计0
